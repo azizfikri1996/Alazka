@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sewa Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, rgba(161, 177, 158, 0.9) 0%, rgba(192, 192, 192, 0.9) 100%), url('/image/images-2-2.jpeg') center/cover fixed;
+      background-blend-mode: overlay;
+      min-height: 100vh;
+      padding: 30px 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 60px;
+      color: white;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 25px;
+    }
+
+    .logo {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+      animation: bounce 0.6s ease;
+    }
+
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .header p {
+      font-size: 16px;
+      opacity: 0.95;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 35px;
+      padding: 20px 0;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+      transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+      cursor: pointer;
+      position: relative;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #66ea87, #4ba295);
+      z-index: 10;
+    }
+
+    .card:hover {
+      transform: translateY(-15px);
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.08);
+    }
+
+    .card-content {
+      padding: 28px;
+    }
+
+    .card h3 {
+      margin: 0 0 12px 0;
+      font-size: 24px;
+      font-weight: 700;
+      color: #333;
+      letter-spacing: -0.5px;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 14px;
+      margin: 10px 0;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .price {
+      font-weight: 700 !important;
+      color: #040705 !important;
+      font-size: 20px !important;
+      margin-top: 18px !important;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 20px;
+      border: none;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+      transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+      box-shadow: 0 6px 25px rgba(102, 234, 111, 0.35);
+      letter-spacing: 0.5px;
+    }
+
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 35px rgba(102, 234, 139, 0.5);
+    }
+
+    button:active {
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <div class="logo-container">
+      <img src="/image/logo al azhar.webp" alt="Alazka Studio Logo" class="logo">
+      <div>
+        <h1>Alazka Studio</h1>
+      </div>
+    </div>
+    <p>Temukan studio terbaik untuk kebutuhan Anda</p>
+  </div>
+
+  <div class="grid">
+  <!-- Loop Studio -->
+  <div class="card">
+  <!-- <img src="https://via.placeholder.com/400x250?text=Studio+1" alt="Studio 1"> -->
+    <div class="card-content">
+      <h3>Studio 1</h3>
+      <p>Kapasitas: 5 orang</p>
+      <p>Description :
+        Studio 1 adalah studio serbaguna yang ideal untuk pemotretan produk, video pendek, dan sesi kreatif lainnya. Dengan pencahayaan profesional dan latar belakang yang dapat disesuaikan, studio ini memberikan fleksibilitas maksimal untuk memenuhi kebutuhan produksi Anda.
+      </p>
+      <button onclick="selectStudio('Studio 1')">Hubungi PIC</button>
+    </div>
+  </div>
+
+  <div class="card">
+  <!-- <img src="https://via.placeholder.com/400x250?text=Studio+2" alt="Studio 2"> -->
+    <div class="card-content">
+      <h3>Studio 2</h3>
+      <p>Kapasitas: 8 orang</p>
+      <p>Description :
+        Studio 2 dirancang khusus untuk produksi video dan fotografi dengan kebutuhan ruang yang lebih besar. Dilengkapi dengan peralatan canggih dan sistem pencahayaan yang dapat diatur, studio ini cocok untuk proyek yang memerlukan pengaturan kompleks dan kreativitas tinggi.
+      </p>
+      <button onclick="selectStudio('Studio 2')">Hubungi PIC</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <!-- <img src="https://via.placeholder.com/400x250?text=Studio+2" alt="Studio 2"> -->
+    <div class="card-content">
+      <h3>Studio 3</h3>
+      <p>Kapasitas: 8 orang</p>
+      <p>Description :
+        Studio 3 adalah pilihan sempurna untuk sesi pemotretan keluarga, acara kecil, atau proyek kreatif lainnya. Dengan suasana yang hangat dan peralatan lengkap, studio ini memberikan kenyamanan dan kemudahan bagi para pengguna untuk menghasilkan karya terbaik mereka.
+      </p>
+      <button onclick="selectStudio('Studio 2')">Hubungi PIC</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <!-- <img src="https://via.placeholder.com/400x250?text=Studio+2" alt="Studio 2"> -->
+    <div class="card-content">
+      <h3>Studio 4</h3>
+      <p>Kapasitas: 8 orang</p>
+      <p>Description :
+        Studio 4 menawarkan ruang yang luas dan serbaguna untuk berbagai jenis produksi. Dengan fasilitas modern dan dukungan teknis yang handal, studio ini sangat cocok untuk proyek-proyek profesional yang membutuhkan kualitas tinggi dan efisiensi dalam pelaksanaan.
+      </p>
+      <button onclick="selectStudio('Studio 2')">Hubungi PIC</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <!-- <img src="https://via.placeholder.com/400x250?text=Studio+2" alt="Studio 2"> -->
+    <div class="card-content">
+      <h3>Studio 5</h3>
+      <p>Kapasitas: 8 orang</p>
+      <p>Description :
+        Studio 5 menawarkan ruang yang luas dan serbaguna untuk berbagai jenis produksi. Dengan fasilitas modern dan dukungan teknis yang handal, studio ini sangat cocok untuk proyek-proyek profesional yang membutuhkan kualitas tinggi dan efisiensi dalam pelaksanaan.
+      </p>
+      <button onclick="selectStudio('Studio 2')">Hubungi PIC</button>
+    </div>
+  </div>
+
+  <!-- Copy sampai Studio 8 -->
+  </div>
+</div>
+
+<script>
+  function selectStudio(studio) {
+    // Arahkan ke WhatsApp dengan nomor PIC
+    const phoneNumber = '082125039377';
+    const message = `Halo, saya ingin menanyakan tentang ${studio}`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.location.href = whatsappUrl;
+  }
+</script>
+
+</body>
+</html>
